@@ -11,4 +11,4 @@ https://github.com/jhipster/jhipster-registry
 
 ## Application URL
 
-http://localhost:8769
+http://localhost:8761
