@@ -7,6 +7,7 @@
 
 #### Features 
 - Microservice architecture  
+- JHipster code generator
 
 ## 
 
