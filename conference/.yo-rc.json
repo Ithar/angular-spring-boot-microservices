@@ -1,0 +1,38 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.malik.ithar"
+    },
+    "jhipsterVersion": "6.10.1",
+    "applicationType": "microservice",
+    "baseName": "conference",
+    "packageName": "com.malik.ithar",
+    "packageFolder": "com/malik/ithar",
+    "serverPort": "8081",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MTE4N2MxODhkYWVkZWU4YjJiOTY0NDQ1OGM5YzBiMmZiZWI5MjY1NWU5YmQ3MzVjZTUwYzBiNzdlODY0NzU3MzJkOTM0M2RmZWVkOGQ0MmYxMjExOWMxOGJjNGQ2NTRmODkwYTEyOTY5NTU1NzZiNGU5NTdjZDUxNWRlMzliMmI=",
+    "embeddableLaunchScript": false,
+    "creationTimestamp": 1594367228778,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
