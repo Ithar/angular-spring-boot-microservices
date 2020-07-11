@@ -22,7 +22,7 @@ Stack  | version |
 *Server* | Tomcat (embedded)
 *Build Tool* | Maven
 *CI* | n/a  
-*Code Coverage* | n/a
+*Code Coverage* | n/ac
 *Build env* | local
 
 ## Application Build 
