@@ -1,8 +1,11 @@
 # JHipster Registry
 
-https://github.com/jhipster/jhipster-registry
+Downloaded from <a href="https://github.com/jhipster/jhipster-registry">jhipster-registry </a>
 
-## Build Instructions
+#### Features 
+- Registry for the microservices   
+
+## Application Build 
 
 ```
 > yarn install
