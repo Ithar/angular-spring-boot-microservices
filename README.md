@@ -27,9 +27,15 @@ Stack  | version |
 
 ## Application Build 
 ``` 
-> git clone https://github.com/jhipster/jhipster-registry registry
-> cd registry 
-> yarn install
+1. Create registery 
+2. Create gateway
+3. Create conference
+ 
+> cd ./gateway 
+> jhipster import-jdl ./scritps/conference-jdl.jh
+> cd ./conference
+> jhipster import-jdl ./scritps/conference-jdl.jh
+
 ```
   
 ## Application URL
