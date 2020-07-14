@@ -1,7 +1,7 @@
 entity Speaker {
 	firstName String required,
     lastName String required,
-    boi Blob required,
+    boi TextBlob required,
     email String required,
     twitter String
 }
@@ -9,8 +9,8 @@ entity Speaker {
 entity Session {
 	title String required,
     description String required,
-    startTime ZonedDateTime,
-    endTime ZonedDateTime
+    startTime ZonedDateTime required,
+    endTime ZonedDateTime required
 }
 
 relationship ManyToMany {

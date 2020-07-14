@@ -171,6 +171,44 @@ public class SessionResourceIT {
 
     @Test
     @Transactional
+    public void checkStartTimeIsRequired() throws Exception {
+        int databaseSizeBeforeTest = sessionRepository.findAll().size();
+        // set the field null
+        session.setStartTime(null);
+
+        // Create the Session, which fails.
+
+
+        restSessionMockMvc.perform(post("/api/sessions")
+            .contentType(MediaType.APPLICATION_JSON)
+            .content(TestUtil.convertObjectToJsonBytes(session)))
+            .andExpect(status().isBadRequest());
+
+        List<Session> sessionList = sessionRepository.findAll();
+        assertThat(sessionList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
+    public void checkEndTimeIsRequired() throws Exception {
+        int databaseSizeBeforeTest = sessionRepository.findAll().size();
+        // set the field null
+        session.setEndTime(null);
+
+        // Create the Session, which fails.
+
+
+        restSessionMockMvc.perform(post("/api/sessions")
+            .contentType(MediaType.APPLICATION_JSON)
+            .content(TestUtil.convertObjectToJsonBytes(session)))
+            .andExpect(status().isBadRequest());
+
+        List<Session> sessionList = sessionRepository.findAll();
+        assertThat(sessionList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
     public void getAllSessions() throws Exception {
         // Initialize the database
         sessionRepository.saveAndFlush(session);

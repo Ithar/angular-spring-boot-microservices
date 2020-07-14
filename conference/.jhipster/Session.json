@@ -17,11 +17,17 @@
     },
     {
       "fieldName": "startTime",
-      "fieldType": "ZonedDateTime"
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": [
+        "required"
+      ]
     },
     {
       "fieldName": "endTime",
-      "fieldType": "ZonedDateTime"
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": [
+        "required"
+      ]
     }
   ],
   "relationships": [

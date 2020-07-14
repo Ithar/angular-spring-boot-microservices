@@ -20,7 +20,7 @@ describe('Service Tests', () => {
       service = injector.get(SpeakerService);
       httpMock = injector.get(HttpTestingController);
 
-      elemDefault = new Speaker(0, 'AAAAAAA', 'AAAAAAA', 'image/png', 'AAAAAAA', 'AAAAAAA', 'AAAAAAA');
+      elemDefault = new Speaker(0, 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', 'AAAAAAA');
     });
 
     describe('Service methods', () => {

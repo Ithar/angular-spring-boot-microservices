@@ -35,10 +35,7 @@ public class Speaker implements Serializable {
     
     @Lob
     @Column(name = "boi", nullable = false)
-    private byte[] boi;
-
-    @Column(name = "boi_content_type", nullable = false)
-    private String boiContentType;
+    private String boi;
 
     @NotNull
     @Column(name = "email", nullable = false)
@@ -89,30 +86,17 @@ public class Speaker implements Serializable {
         this.lastName = lastName;
     }
 
-    public byte[] getBoi() {
+    public String getBoi() {
         return boi;
     }
 
-    public Speaker boi(byte[] boi) {
+    public Speaker boi(String boi) {
         this.boi = boi;
         return this;
     }
 
-    public void setBoi(byte[] boi) {
+    public void setBoi(String boi) {
         this.boi = boi;
-    }
-
-    public String getBoiContentType() {
-        return boiContentType;
-    }
-
-    public Speaker boiContentType(String boiContentType) {
-        this.boiContentType = boiContentType;
-        return this;
-    }
-
-    public void setBoiContentType(String boiContentType) {
-        this.boiContentType = boiContentType;
     }
 
     public String getEmail() {
@@ -191,7 +175,6 @@ public class Speaker implements Serializable {
             ", firstName='" + getFirstName() + "'" +
             ", lastName='" + getLastName() + "'" +
             ", boi='" + getBoi() + "'" +
-            ", boiContentType='" + getBoiContentType() + "'" +
             ", email='" + getEmail() + "'" +
             ", twitter='" + getTwitter() + "'" +
             "}";

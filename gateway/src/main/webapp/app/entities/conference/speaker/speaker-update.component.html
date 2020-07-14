@@ -37,21 +37,8 @@
 
                 <div class="form-group">
                     <label class="form-control-label" for="field_boi">Boi</label>
-                    <div>
-                        <div *ngIf="editForm.get('boi')!.value" class="form-text text-danger clearfix">
-                            <a class="pull-left" (click)="openFile(editForm.get('boiContentType')!.value, editForm.get('boi')!.value)">open</a><br>
-                            <span class="pull-left">{{ editForm.get('boiContentType')!.value }}, {{ byteSize(editForm.get('boi')!.value) }}</span>
-                            <button type="button" (click)="editForm.patchValue({boi: null});editForm.patchValue({boiContentType: null});"
-                                    class="btn btn-secondary btn-xs pull-right">
-                                <fa-icon icon="times"></fa-icon>
-                            </button>
-                        </div>
-                        <input type="file" id="file_boi" (change)="setFileData($event, 'boi', false)"/>
-                    </div>
-                    <input type="hidden" class="form-control" name="boi" id="field_boi"
-                           formControlName="boi"/>
-                    <input type="hidden" class="form-control" name="boiContentType" id="field_boiContentType"
-                           formControlName="boiContentType" />
+                    <textarea class="form-control" name="boi" id="field_boi"
+                              formControlName="boi"></textarea>
                     <div *ngIf="editForm.get('boi')!.invalid && (editForm.get('boi')!.dirty || editForm.get('boi')!.touched)">
                         <small class="form-text text-danger"
                                *ngIf="editForm.get('boi')?.errors?.required">

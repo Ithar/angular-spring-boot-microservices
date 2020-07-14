@@ -8,7 +8,7 @@ Generated vai JHipster type Microservice gateway
 ## Application Build 
 ``` 
 > cd gateway 
-> Jhipster (type generate)
+> Jhipster (type generate port 8082)
 > yarn install
 > ./mvnw
 ```

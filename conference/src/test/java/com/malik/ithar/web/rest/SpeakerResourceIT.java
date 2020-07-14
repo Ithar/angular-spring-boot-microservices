@@ -44,10 +44,8 @@ public class SpeakerResourceIT {
     private static final String DEFAULT_LAST_NAME = "AAAAAAAAAA";
     private static final String UPDATED_LAST_NAME = "BBBBBBBBBB";
 
-    private static final byte[] DEFAULT_BOI = TestUtil.createByteArray(1, "0");
-    private static final byte[] UPDATED_BOI = TestUtil.createByteArray(1, "1");
-    private static final String DEFAULT_BOI_CONTENT_TYPE = "image/jpg";
-    private static final String UPDATED_BOI_CONTENT_TYPE = "image/png";
+    private static final String DEFAULT_BOI = "AAAAAAAAAA";
+    private static final String UPDATED_BOI = "BBBBBBBBBB";
 
     private static final String DEFAULT_EMAIL = "AAAAAAAAAA";
     private static final String UPDATED_EMAIL = "BBBBBBBBBB";
@@ -80,7 +78,6 @@ public class SpeakerResourceIT {
             .firstName(DEFAULT_FIRST_NAME)
             .lastName(DEFAULT_LAST_NAME)
             .boi(DEFAULT_BOI)
-            .boiContentType(DEFAULT_BOI_CONTENT_TYPE)
             .email(DEFAULT_EMAIL)
             .twitter(DEFAULT_TWITTER);
         return speaker;
@@ -96,7 +93,6 @@ public class SpeakerResourceIT {
             .firstName(UPDATED_FIRST_NAME)
             .lastName(UPDATED_LAST_NAME)
             .boi(UPDATED_BOI)
-            .boiContentType(UPDATED_BOI_CONTENT_TYPE)
             .email(UPDATED_EMAIL)
             .twitter(UPDATED_TWITTER);
         return speaker;
@@ -124,7 +120,6 @@ public class SpeakerResourceIT {
         assertThat(testSpeaker.getFirstName()).isEqualTo(DEFAULT_FIRST_NAME);
         assertThat(testSpeaker.getLastName()).isEqualTo(DEFAULT_LAST_NAME);
         assertThat(testSpeaker.getBoi()).isEqualTo(DEFAULT_BOI);
-        assertThat(testSpeaker.getBoiContentType()).isEqualTo(DEFAULT_BOI_CONTENT_TYPE);
         assertThat(testSpeaker.getEmail()).isEqualTo(DEFAULT_EMAIL);
         assertThat(testSpeaker.getTwitter()).isEqualTo(DEFAULT_TWITTER);
     }
@@ -219,8 +214,7 @@ public class SpeakerResourceIT {
             .andExpect(jsonPath("$.[*].id").value(hasItem(speaker.getId().intValue())))
             .andExpect(jsonPath("$.[*].firstName").value(hasItem(DEFAULT_FIRST_NAME)))
             .andExpect(jsonPath("$.[*].lastName").value(hasItem(DEFAULT_LAST_NAME)))
-            .andExpect(jsonPath("$.[*].boiContentType").value(hasItem(DEFAULT_BOI_CONTENT_TYPE)))
-            .andExpect(jsonPath("$.[*].boi").value(hasItem(Base64Utils.encodeToString(DEFAULT_BOI))))
+            .andExpect(jsonPath("$.[*].boi").value(hasItem(DEFAULT_BOI.toString())))
             .andExpect(jsonPath("$.[*].email").value(hasItem(DEFAULT_EMAIL)))
             .andExpect(jsonPath("$.[*].twitter").value(hasItem(DEFAULT_TWITTER)));
     }
@@ -258,8 +252,7 @@ public class SpeakerResourceIT {
             .andExpect(jsonPath("$.id").value(speaker.getId().intValue()))
             .andExpect(jsonPath("$.firstName").value(DEFAULT_FIRST_NAME))
             .andExpect(jsonPath("$.lastName").value(DEFAULT_LAST_NAME))
-            .andExpect(jsonPath("$.boiContentType").value(DEFAULT_BOI_CONTENT_TYPE))
-            .andExpect(jsonPath("$.boi").value(Base64Utils.encodeToString(DEFAULT_BOI)))
+            .andExpect(jsonPath("$.boi").value(DEFAULT_BOI.toString()))
             .andExpect(jsonPath("$.email").value(DEFAULT_EMAIL))
             .andExpect(jsonPath("$.twitter").value(DEFAULT_TWITTER));
     }
@@ -287,7 +280,6 @@ public class SpeakerResourceIT {
             .firstName(UPDATED_FIRST_NAME)
             .lastName(UPDATED_LAST_NAME)
             .boi(UPDATED_BOI)
-            .boiContentType(UPDATED_BOI_CONTENT_TYPE)
             .email(UPDATED_EMAIL)
             .twitter(UPDATED_TWITTER);
 
@@ -303,7 +295,6 @@ public class SpeakerResourceIT {
         assertThat(testSpeaker.getFirstName()).isEqualTo(UPDATED_FIRST_NAME);
         assertThat(testSpeaker.getLastName()).isEqualTo(UPDATED_LAST_NAME);
         assertThat(testSpeaker.getBoi()).isEqualTo(UPDATED_BOI);
-        assertThat(testSpeaker.getBoiContentType()).isEqualTo(UPDATED_BOI_CONTENT_TYPE);
         assertThat(testSpeaker.getEmail()).isEqualTo(UPDATED_EMAIL);
         assertThat(testSpeaker.getTwitter()).isEqualTo(UPDATED_TWITTER);
     }

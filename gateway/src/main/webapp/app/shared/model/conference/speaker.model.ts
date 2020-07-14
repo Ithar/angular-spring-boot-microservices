@@ -4,7 +4,6 @@ export interface ISpeaker {
   id?: number;
   firstName?: string;
   lastName?: string;
-  boiContentType?: string;
   boi?: any;
   email?: string;
   twitter?: string;
@@ -16,7 +15,6 @@ export class Speaker implements ISpeaker {
     public id?: number,
     public firstName?: string,
     public lastName?: string,
-    public boiContentType?: string,
     public boi?: any,
     public email?: string,
     public twitter?: string,

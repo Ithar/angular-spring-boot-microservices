@@ -35,8 +35,20 @@ Stack  | version |
 > jhipster import-jdl ../scritps/conference-jdl.jh
 > cd ./conference
 > jhipster import-jdl ../scritps/conference-jdl.jh
-
 ```
+  
+## Application Run 
+``` 
+> cd registery 
+> ./mvnw
+ 
+> cd ./gateway 
+> ./mvnw
+
+> cd ./conference
+> ./mvnw
+```
+  
   
 ## Application URL
 http://localhost:8080/

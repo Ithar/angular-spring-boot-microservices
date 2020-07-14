@@ -34,10 +34,12 @@ public class Session implements Serializable {
     @Column(name = "description", nullable = false)
     private String description;
 
-    @Column(name = "start_time")
+    @NotNull
+    @Column(name = "start_time", nullable = false)
     private ZonedDateTime startTime;
 
-    @Column(name = "end_time")
+    @NotNull
+    @Column(name = "end_time", nullable = false)
     private ZonedDateTime endTime;
 
     @ManyToMany(mappedBy = "sessions")

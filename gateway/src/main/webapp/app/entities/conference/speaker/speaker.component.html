@@ -37,10 +37,7 @@
                     <td><a [routerLink]="['/speaker', speaker.id, 'view']">{{ speaker.id }}</a></td>
                     <td>{{ speaker.firstName }}</td>
                     <td>{{ speaker.lastName }}</td>
-                    <td>
-                        <a *ngIf="speaker.boi" (click)="openFile(speaker.boiContentType, speaker.boi)">open</a>
-                        <span *ngIf="speaker.boi">{{ speaker.boiContentType }}, {{ byteSize(speaker.boi) }}</span>
-                    </td>
+                    <td>{{ speaker.boi }}</td>
                     <td>{{ speaker.email }}</td>
                     <td>{{ speaker.twitter }}</td>
                     <td>

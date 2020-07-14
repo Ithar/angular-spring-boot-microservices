@@ -18,10 +18,7 @@
                 </dd>
                 <dt><span>Boi</span></dt>
                 <dd>
-                    <div *ngIf="speaker.boi">
-                        <a (click)="openFile(speaker.boiContentType, speaker.boi)">open</a>
-                        {{ speaker.boiContentType }}, {{ byteSize(speaker.boi) }}
-                    </div>
+                    <span>{{ speaker.boi }}</span>
                 </dd>
                 <dt><span>Email</span></dt>
                 <dd>
