@@ -32,9 +32,9 @@ Stack  | version |
 3. Create conference
  
 > cd ./gateway 
-> jhipster import-jdl ./scritps/conference-jdl.jh
+> jhipster import-jdl ../scritps/conference-jdl.jh
 > cd ./conference
-> jhipster import-jdl ./scritps/conference-jdl.jh
+> jhipster import-jdl ../scritps/conference-jdl.jh
 
 ```
   

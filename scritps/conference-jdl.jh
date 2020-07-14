@@ -2,16 +2,15 @@ entity Speaker {
 	firstName String required,
     lastName String required,
     boi Blob required,
-    email Email required,
+    email Email,
     twitter String
 }
 
 entity Session {
 	title String required,
     description String required,
-    startTime ZoneDateTime required,
-    endTime ZoneDateTime required,
-    duration LocaleTime required
+    startTime ZoneDateTime,
+    endTime ZoneDateTime
 }
 
 relationship ManyToMany {
@@ -19,10 +18,3 @@ relationship ManyToMany {
 }
 
 microservice * with conference
-
-// One-to-One relationship: A speaker is an expert in one topic and only one expert per a topic.
-// One-to-Many relationship: A speaker is an expert in one topic and any given topic has one or more speakers.
-//	- Unidirectional: A speaker reference Skills via its Set
-//  -Bidirectional: Each "child" Skill has a single pointer back up to the Person (which is not shown in your code)
-// Many-to-Many relationships: A speaker is an expert in several topics and each topic has one or more speakers.
-
