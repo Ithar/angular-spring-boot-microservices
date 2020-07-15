@@ -10,7 +10,7 @@ Generated vai JHipster type Microservice
 
 ```
 > cd conference
-> jhipster (type microservice)
+> jhipster (generted type 'microservice' port 8082)
 > ./mvnw
 ```
 
