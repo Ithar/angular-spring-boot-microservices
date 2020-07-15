@@ -1,13 +1,12 @@
 # angular-spring-boot-microservices
 
-- Conerence 
+- Conference sessions  
 - Blog
 - Registration
-- Training
 
 #### Features 
-- Microservice architecture  
 - JHipster code generator
+- Microservice architecture  
 
 ## 
 
