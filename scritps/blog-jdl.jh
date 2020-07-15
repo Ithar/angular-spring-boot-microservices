@@ -1,0 +1,18 @@
+entity Author {
+	firstName String required,
+    lastName String required,
+    boi TextBlob
+}
+
+entity Blogpost {
+	title String required,
+    intro String required,
+    blog TextBlob required,
+    created ZonedDateTime
+}
+
+relationship OneToMany {
+	Author{posts} to Blogpost{author}
+}
+
+microservice * with blog

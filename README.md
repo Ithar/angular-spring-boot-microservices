@@ -22,19 +22,26 @@ Stack  | version |
 *Server* | Tomcat (embedded)
 *Build Tool* | Maven
 *CI* | n/a  
-*Code Coverage* | n/ac
+*Code Coverage* | n/a
 *Build env* | local
 
 ## Application Build 
 ``` 
-1. Create registery 
-2. Create gateway
-3. Create conference
+1. Create registery (type registery)
+2. Create gateway (type gateway)
+3. Create conference (type microservice)
+4. Create blog (type microservice)
  
-> cd ./gateway 
-> jhipster import-jdl ../scritps/conference-jdl.jh
 > cd ./conference
 > jhipster import-jdl ../scritps/conference-jdl.jh
+
+> cd ./blog
+> jhipster import-jdl ../scritps/blog-jdl.jh
+
+> cd ./gateway 
+> jhipster import-jdl ../scritps/conference-jdl.jh
+> jhipster import-jdl ../scritps/blog-jdl.jh
+
 ```
   
 ## Application Run 

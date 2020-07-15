@@ -1,0 +1,73 @@
+<div>
+    <h2 id="page-heading">
+        <span>Blogposts</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-blogpost" [routerLink]="['/blogpost/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span>
+            Create a new Blogpost
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="blogposts?.length === 0">
+        <span>No blogposts found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="blogposts && blogposts.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span>ID</span></th>
+                    <th scope="col" ><span>Title</span></th>
+                    <th scope="col" ><span>Intro</span></th>
+                    <th scope="col" ><span>Blog</span></th>
+                    <th scope="col" ><span>Created</span></th>
+                    <th scope="col" ><span>Author</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let blogpost of blogposts ;trackBy: trackId">
+                    <td><a [routerLink]="['/blogpost', blogpost.id, 'view']">{{ blogpost.id }}</a></td>
+                    <td>{{ blogpost.title }}</td>
+                    <td>{{ blogpost.intro }}</td>
+                    <td>{{ blogpost.blog }}</td>
+                    <td>{{ blogpost.created | date:'medium' }}</td>
+                    <td>
+                        <div *ngIf="blogpost.author">
+                            <a [routerLink]="['/author', blogpost.author?.id, 'view']" >{{ blogpost.author?.id }}</a>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/blogpost', blogpost.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/blogpost', blogpost.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(blogpost)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

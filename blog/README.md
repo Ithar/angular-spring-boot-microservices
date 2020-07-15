@@ -16,4 +16,4 @@ Generated vai JHipster type Microservice
 
 ## Application URL
 
-http://localhost:8082/
+http://localhost:8083/
